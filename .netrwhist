@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/jelgar/Documents/dev/STA/django-sta-test/bristol_sta_test/config/settings'
+let g:netrw_dirhist_1='/home/jelgar/Documents/dev/now-u/app/lib/pages/campaign'
+let g:netrw_dirhist_0='/home/jelgar/Documents/dev/now-u/app/lib/viewmodels'
+let g:netrw_dirhist_9='/home/jelgar/Documents/dev/now-u/app/lib/services'
+let g:netrw_dirhist_8='/home/jelgar/Documents/dev/now-u/app/lib/pages'
+let g:netrw_dirhist_7='/home/jelgar/Documents/dev/now-u/app/lib'
+let g:netrw_dirhist_6='/home/jelgar/Documents/dev/now-u/app/lib/pages/campaign/LearningCentre'
+let g:netrw_dirhist_5='/home/jelgar/Documents/dev/now-u/app/lib/viewmodels'
+let g:netrw_dirhist_4='/home/jelgar/Documents/dev/now-u/app/lib/services'
+let g:netrw_dirhist_3='/home/jelgar/Documents/dev/now-u/app/lib'
