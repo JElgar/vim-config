@@ -11,7 +11,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-jedi', {'do': 'yarn install'}
 Plug 'ElmCast/elm-vim'
 
 Plug 'SirVer/ultisnips'
@@ -33,8 +32,9 @@ Plug 'christoomey/vim-tmux-navigator'
 "CoVIM
 Plug 'makerforceio/CoVim'
 "" Python
-Plugin 'plytophogy/vim-virtualenv'
-Plugin 'PieterjanMontens/vim-pipenv'
+Plug 'plytophogy/vim-virtualenv'
+Plug 'PieterjanMontens/vim-pipenv'
+Plug 'psf/black', { 'branch': 'stable' }
 
 "Latex
 Plug 'lervag/vimtex'
@@ -61,6 +61,12 @@ Plug 'tpope/vim-fugitive'
 
 " Vim Zoom
 Plug 'dhruvasagar/vim-zoom'
+
+"Linting
+Plug 'vim-syntastic/syntastic'
+
+" C++
+Plug 'alepez/vim-gtest'
 
 "Vim surround - vim commentry 
 
@@ -112,7 +118,7 @@ nnoremap <C-e> <C-w>
 nmap <C-e>m <Plug>(zoom-toggle)
 " Splits
 set splitbelow
-set splitrig
+" set splitrig
 
 " Control P Setup
 let g:ctrlp_map = '<c-p>'
@@ -145,6 +151,19 @@ let NERDTreeDirArrows = 1
 
 " Yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Python
+
+"" Format on save
+autocmd BufWritePre *.py execute ':Black'
+
+" Linting
+let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_c_checkers = ['cpplint']
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+" The following two lines are optional. Configure it to your liking!
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 
 " Source other configs
 source $HOME/.config/nvim/configs/fzf.vim
